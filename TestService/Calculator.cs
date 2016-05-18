@@ -8,8 +8,13 @@ using System.Text;
 namespace TestService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
-    public class Service1 : IService1
+    public class Calculator : ICalculator
     {
+        public double Addition(double a, double b)
+        {
+            return a + b;
+        }
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);
@@ -26,6 +31,11 @@ namespace TestService
                 composite.StringValue += "Suffix";
             }
             return composite;
+        }
+
+        public string TestConnection()
+        {
+            return "OK";
         }
     }
 }
